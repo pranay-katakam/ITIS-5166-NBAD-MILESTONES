@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "61968f5485f69be6b78c8d6e"
+  },
+  "connectionName": "College Fair",
+  "connectionTopic": "Pizza",
+  "details": "Free Pizza to all the students (First come first serve)",
+  "startTime": "2021-12-08T16:07",
+  "endTime": "2021-12-08T17:07",
+  "location": "Student Union Center",
+  "imageurl": "https://w7.pngwing.com/pngs/756/160/png-transparent-new-york-style-pizza-italian-cuisine-take-out-pasta-pizza.png",
+  "hostName": "Department of Computer Science",
+  "date": "2021-11-03",
+  "author": {
+    "$oid": "6196e7df51cce989bbf8d803"
+  },
+  "updatedAt": {
+    "$date": "2021-12-08T18:07:44.705Z"
+  }
+},{
+  "_id": {
+    "$oid": "61968f5485f69be6b78c8d6f"
+  },
+  "connectionName": "Student Orientation",
+  "connectionTopic": "Burger Party",
+  "details": "All types of Burgers are available and Welcome Reception",
+  "startTime": "2021-12-08T15:07",
+  "endTime": "2021-12-08T17:07",
+  "location": "Clock tower",
+  "imageurl": "https://www.freepnglogos.com/uploads/burger-png/burger-png-png-images-yellow-images-12.png",
+  "hostName": "Department of Computer Science",
+  "date": "2021-12-15",
+  "author": {
+    "$oid": "6196e7df51cce989bbf8d803"
+  },
+  "updatedAt": {
+    "$date": "2021-12-08T18:07:53.557Z"
+  }
+},{
+  "_id": {
+    "$oid": "61968f5485f69be6b78c8d70"
+  },
+  "connectionName": "College Fair",
+  "connectionTopic": "Welcome drinks",
+  "details": "Drinks to freshers ",
+  "startTime": "2021-12-08T15:06",
+  "endTime": "2021-12-08T16:06",
+  "location": "Cone Hill",
+  "imageurl": "https://thumbs.dreamstime.com/b/welcome-drinks-wedding-venue-welcoming-drinks-juice-orange-cherry-welcome-drinks-asian-wedding-reception-159014717.jpg",
+  "hostName": "Student Organization",
+  "date": "2021-11-22",
+  "updatedAt": {
+    "$date": "2021-12-08T18:06:45.583Z"
+  },
+  "author": {
+    "$oid": "6196ffb3a73b067ec8688f00"
+  }
+},{
+  "_id": {
+    "$oid": "61968f5485f69be6b78c8d71"
+  },
+  "connectionName": "Student Orientation",
+  "connectionTopic": "Spirits on the way",
+  "details": "All types of Beers are available and Welcome Reception",
+  "startTime": "2021-12-08T15:06",
+  "endTime": "2021-12-08T16:06",
+  "location": "Cone Hill",
+  "imageurl": "https://www.ginandtonicly.com/wp-content/uploads/2019/06/how-to-drink-spirits-1170x900.jpg",
+  "hostName": "Student Organization",
+  "date": "2021-11-22",
+  "author": {
+    "$oid": "6196ffb3a73b067ec8688f00"
+  },
+  "updatedAt": {
+    "$date": "2021-12-08T18:06:54.661Z"
+  }
+},{
+  "_id": {
+    "$oid": "61968f5485f69be6b78c8d72"
+  },
+  "connectionName": "Student Orientation",
+  "connectionTopic": "Welcome Reception Spring 2022",
+  "details": "Burgers and Pizza are ready",
+  "startTime": "2021-12-08T17:07",
+  "endTime": "2021-12-08T18:07",
+  "location": "Cone Hill",
+  "imageurl": "https://www.ginandtonicly.com/wp-content/uploads/2019/06/how-to-drink-spirits-1170x900.jpg",
+  "hostName": "Student Organization",
+  "date": "2021-11-22",
+  "author": {
+    "$oid": "6196ffb3a73b067ec8688f00"
+  },
+  "updatedAt": {
+    "$date": "2021-12-08T18:07:08.619Z"
+  }
+},{
+  "_id": {
+    "$oid": "61968f5485f69be6b78c8d73"
+  },
+  "connectionName": "College Fair",
+  "connectionTopic": "Free lunch and devotion",
+  "details": "Every now and then we have a free lunch and a short devotion. ",
+  "startTime": "2021-12-08T17:08",
+  "endTime": "2021-12-08T19:08",
+  "location": "Cone Hill",
+  "imageurl": "https://thumbs.dreamstime.com/b/welcome-drinks-wedding-venue-welcoming-drinks-juice-orange-cherry-welcome-drinks-asian-wedding-reception-159014717.jpg",
+  "hostName": "Student Organization",
+  "date": "2021-11-22",
+  "author": {
+    "$oid": "6196e7df51cce989bbf8d803"
+  },
+  "updatedAt": {
+    "$date": "2021-12-08T18:08:04.775Z"
+  }
+}]

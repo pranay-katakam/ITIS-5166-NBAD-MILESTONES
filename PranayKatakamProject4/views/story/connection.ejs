@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="middle">
+        <h2>
+            <u>
+                <%=connection.connectionName%>
+            </u>
+        </h2>
+        <div>
+            <img class="menu-item" src="<%=connection.imageurl%>" alt="Image not available">
+        </div>
+        <div>
+            <p>Hosted By - <%=connection.author.firstName + ' ' + connection.author.lastName%>
+            </p>
+            <p>
+                <%=connection.date%>
+            </p>
+            <p>
+                <%=connection.startTime%> - <%=connection.endTime%>
+            </p>
+            <p>
+                Location - <%=connection.location%>
+            </p>
+            <p>
+                Details - <%=connection.details%>
+            </p>
+        </div>
+
+        <%if(user && user._id==connection.author._id) {%>
+            <div class="float-middle">
+                <form class="form-middle">
+                    <button type="submit" formmethod="GET" formaction="/connections/<%=connection.id%>/edit"
+                        class="button-margin">Update</button>
+
+                    <button type="submit" formmethod="POST"
+                        formaction="/connections/delete/<%= connection.id%>?_method=DELETE"
+                        class="button-margin">Delete</button>
+                </form>
+            </div>
+            <%}%>
+    </div>
+
+
+    <%- include('../partials/footer.ejs')%>

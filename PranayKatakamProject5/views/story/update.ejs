@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="container">
+        <form method="POST" action="/connections/<%=connection.id%>?_method=PUT" id="simple-forms">
+            <div id="row">
+                <label>Event Name</label>
+                <input type="text" id="leagueName-input" name="connectionName" value="<%=connection.connectionName%>" required>
+            </div>
+            <div>
+                <label>Event Title</label>
+                <input type="text" id="title-input" name="connectionTopic" value="<%=connection.connectionTopic%>" required>
+            </div>
+            <div id="inputs">
+                <label>Host</label>
+                <input type="text" id="host-input" name="hostName" value="<%=connection.hostName%>" required>
+            </div>
+            <div>
+                <label>Details</label>
+                <textarea rows="10" cols="50" name="details" required><%=connection.details%></textarea>
+            </div>
+            <div>
+                <label>Location</label>
+                <input type="text" id="where-input" name="location" value="<%=connection.location%>" required>
+            </div>
+            <div>
+                <label>When</label>
+                <input type="date" data-date-inline-picker="true" id="when-input" name="date" data-polyfill="all"
+                    value="<%=connection.date%>" required>
+            </div>
+            <div>
+                <label>Start time</label>
+                <input type="datetime-local" name="startTime" minlength="1" maxlength = "12" id="start-input" value="<%=connection.startTime%>" required>
+            </div>
+            <div>
+                <label>End time</label>
+                <input type="datetime-local" name="endTime" minlength="1" maxlength = "12" id="end-input" value="<%=connection.endTime%>" required>
+            </div>
+            <div>
+                <label>Image URL</label>
+                <input type="text" id="imageurl" name="imageurl" placeholder="imageURL"
+                    value="<%=connection.imageurl%>" required>
+            </div>
+            <input type="submit" id="button-margin" class="button-margin">
+            <br /><br /><br /><br /><br />
+        </form>
+
+    </div>
+
+    <%- include('../partials/footer.ejs')%>

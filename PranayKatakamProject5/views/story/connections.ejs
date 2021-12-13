@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="menu-center">
+
+        <% if(groups){ for(let key in groups) { let connections=groups[key]; %>
+            <h2>
+                <%=key%>
+            </h2>
+            <%connections.forEach(connection=>{ %>
+                <ul>
+                    <li>
+                        <a href="/connections/<%= connection.id%>">
+                            <%=connection.connectionTopic%>
+                        </a>
+                    </li>
+                </ul>
+                <% }); }}else{ %>
+                    <p>There are no Events to display.</p>
+                    <%}%>
+
+    </div>
+
+
+
+    <%- include('../partials/footer.ejs')%>

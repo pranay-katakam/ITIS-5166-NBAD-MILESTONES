@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="container">
+        <form method="POST" action="/connections/<%=connection.connectionId%>?_method=PUT" id="simple-forms">
+            <div id="row">
+                <label>Event Name</label>
+                <input type="text" id="leagueName-input" name="connectionName" value="<%=connection.connectionName%>">
+            </div>
+            <div>
+                <label>Event Title</label>
+                <input type="text" id="title-input" name="connectionTopic" value="<%=connection.connectionTopic%>">
+            </div>
+            <div id="inputs">
+                <label>Host</label>
+                <input type="text" id="host-input" name="hostName" value="<%=connection.hostName%>">
+            </div>
+            <div>
+                <label>Details</label>
+                <textarea rows="10" cols="50" name="details"><%=connection.details%></textarea>
+            </div>
+            <div>
+                <label>Location</label>
+                <input type="text" id="where-input" name="location" value="<%=connection.location%>">
+            </div>
+            <div>
+                <label>When</label>
+                <input type="date" data-date-inline-picker="true" id="when-input" name="date" data-polyfill="all"
+                    value="<%=connection.date%>">
+            </div>
+            <div>
+                <label>Start</label>
+                <input type="text" name="startTime" id="start-input" value="<%=connection.startTime%>">
+            </div>
+            <div>
+                <label>End</label>
+                <input type="text" name="endTime" id="end-input" value="<%=connection.endTime%>">
+            </div>
+            <div>
+                <label>Image URL</label>
+                <input type="text" id="image-url-input" name="image" placeholder="imageURL"
+                    value="<%=connection.image%>">
+            </div>
+            <input type="submit" id="button-margin" class="button-margin">
+            <br /><br /><br /><br /><br />
+        </form>
+
+    </div>
+
+    <%- include('../partials/footer.ejs')%>

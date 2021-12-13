@@ -1,0 +1,83 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="profile-data">
+        <%if(connections.length) {%>
+            <h2>
+                <%=user.firstName +'\'s Connections'%>
+            </h2>
+            <table class='profile'>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Event Topic</th>
+                    <th>Actions</th>
+                </tr>
+                <%connections.forEach(connection=> {%>
+                    <tr>
+                        <td>
+                            <p>
+                                <%=connection.connectionName%>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%=connection.connectionTopic%>
+                            </p>
+                        </td>
+                        <td>
+                            <form class="form-middle">
+                                <button type="submit" formmethod="GET" formaction="/connections/<%=connection.id%>/edit"
+                                    class="button-margin">Update</button>
+
+                                <button type="submit" formmethod="POST"
+                                    formaction="/connections/delete/<%= connection.id%>?_method=DELETE"
+                                    class="button-margin">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <%});%>
+            </table>
+            <% } else {%>
+                <p>You have not created any events</p>
+                <%}%>
+                <br/>
+                    <h2>
+                        <%=user.firstName%>'s RSVPs
+                    </h2>
+                    <% if (rsvpArr.length>0) { %>
+                        <table class='profile'>
+                            <tr>
+                                <th>Event</th>
+                                <th>Event Topic</th>
+                                <th>Going?</th>
+                                <th>Actions</th>
+                            </tr>
+                            <% for(var i=0; i<rsvpArr.length; i++){ %>
+                                <tr>
+                                    <td>
+                                        <a>
+                                            <%= rsvpArr[i].connectionId.connectionName%>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <%= rsvpArr[i].connectionId.connectionTopic%>
+                                    </td>
+                                    <td>
+                                        <%= rsvpArr[i].status%>
+                                    </td>
+                                    <td>
+                                        <form class='form-middle'>
+                                            <button class=button-margin type="submit" formmethod="GET"
+                                                formaction="/connections/<%= rsvpArr[i].connectionId._id%>">Update</button>
+                                            <button class=button-margin type="submit" formmethod="POST"
+                                                formaction="/connections/<%= rsvpArr[i].connectionId._id%>/rsvpDelete">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <%} %>
+                        </table>
+                        <%} else{ %>
+                            <p> You have not RSVPed any Events</p>
+                            <% } %>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>

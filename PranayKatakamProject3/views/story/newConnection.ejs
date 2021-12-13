@@ -1,0 +1,47 @@
+<%- include('../partials/header.ejs')%>
+    <div class="container">
+        <form action="/connection" method="POST" id="simple-forms">
+            <div id="row">
+                <label>Event Name</label>
+                <input type="text" id="leagueName-input" name="connectionName" placeholder="Enter the Event Name"
+                    required>
+            </div>
+            <div>
+                <label>Event Title</label>
+                <input type="text" id="title-input" name="connectionTopic" placeholder="Enter the Tilte" required>
+            </div>
+            <div id="inputs">
+                <label>Host</label>
+                <input type="text" id="host-input" name="hostName" placeholder="Enter Host's Name" required>
+            </div>
+            <div>
+                <label>Details</label>
+                <textarea rows="10" cols="50" name="details" required></textarea>
+            </div>
+            <div>
+                <label>Location</label>
+                <input type="text" id="where-input" name="location" placeholder="Enter the location" required>
+            </div>
+            <div>
+                <label>When</label>
+                <input type="date" data-date-inline-picker="true" id="when-input" name="date" data-polyfill="all"
+                    required>
+            </div>
+            <div>
+                <label>Start time</label>
+                <input type="text" name="startTime" id="start-input" required>
+            </div>
+            <div>
+                <label>End time</label>
+                <input type="text" name="endTime" id="end-input" required>
+            </div>
+            <div>
+                <label>Image URL</label>
+                <input type="text" id="imageurl" name="imageurl" placeholder="imageurl" required>
+            </div>
+            <input type="submit" id="button-margin" class="button-margin">
+            <br /><br /><br /><br /><br />
+        </form>
+
+    </div>
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="profile-data">
+        <%if(connections.length) {%>
+            <h2>
+                <%=user.firstName +'\'s Connections'%>
+            </h2>
+            <table class='profile'>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Event Topic</th>
+                    <th>Actions</th>
+                </tr>
+                <%connections.forEach(connection=> {%>
+                    <tr>
+                        <td>
+                            <p>
+                                <%=connection.connectionName%>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <%=connection.connectionTopic%>
+                            </p>
+                        </td>
+                        <td>
+                            <form class="form-middle">
+                                <button type="submit" formmethod="GET" formaction="/connections/<%=connection.id%>/edit"
+                                    class="button-margin">Update</button>
+
+                                <button type="submit" formmethod="POST"
+                                    formaction="/connections/delete/<%= connection.id%>?_method=DELETE"
+                                    class="button-margin">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <%});%>
+            </table>
+            <% } else {%>
+                <p>You have not created any events</p>
+                <%}%>
+    </div>
+    <%- include('../partials/footer.ejs')%>
